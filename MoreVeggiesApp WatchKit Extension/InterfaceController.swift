@@ -12,6 +12,14 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var veggieFact: WKInterfaceLabel!
+    
+    @IBAction func moreFactsPressed() {
+    }
+    
+    @IBAction func moreVeggiesPressed() {
+    }
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
