@@ -14,13 +14,17 @@ import CoreData
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var vegLabel: WKInterfaceLabel!
    
-    @IBOutlet weak var factText: WKInterfaceLabel!
+    @IBOutlet weak var labelText: WKInterfaceLabel!
     
     @IBAction func moreFactsPressed() {
+        labelText.setText("Green looks good on you!")
     }
     
     @IBAction func moreVeggiesPressed() {
+        vegLabel.setText("Carrots")
+        labelText.setText("Good for your eyes O_O")
     }
     
     override func awakeWithContext(context: AnyObject?) {

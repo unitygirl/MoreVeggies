@@ -13,7 +13,7 @@
                         <label alignment="center" text="Broccoli" textAlignment="center" id="qEf-r1-jHH">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <label width="134" height="59" alignment="left" text="Broccolis are great for the eyes" numberOfLines="3" id="XZl-Gc-VdG"/>
+                        <label width="134" height="59" alignment="left" text="Broccoli is a healthy snack!" numberOfLines="3" id="XZl-Gc-VdG"/>
                         <button width="1" alignment="left" title="More Facts" id="c6k-RS-TsX">
                             <connections>
                                 <action selector="moreFactsPressed" destination="AgC-eL-Hgc" id="87q-dj-ePK"/>
@@ -31,7 +31,8 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="veggieFact" destination="XZl-Gc-VdG" id="UaP-8s-cyL"/>
+                        <outlet property="labelText" destination="XZl-Gc-VdG" id="OZp-IR-p80"/>
+                        <outlet property="vegLabel" destination="qEf-r1-jHH" id="Py0-Xz-agO"/>
                     </connections>
                 </controller>
             </objects>

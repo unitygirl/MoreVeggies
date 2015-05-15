@@ -17,26 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Facts here:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVA-Uc-ghb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Veggie Facts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVA-Uc-ghb">
                                 <rect key="frame" x="95" y="394" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Fact String" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf5-sE-Wta">
-                                <rect key="frame" x="217" y="351" width="309" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf5-sE-Wta">
+                                <rect key="frame" x="16" y="529" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="YEN-JA-Xed"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YEN-JA-Xed"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JVA-Uc-ghb" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="3db-LU-9mV"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="rf5-sE-Wta" secondAttribute="bottom" constant="200" id="RFm-Np-d7P"/>
+                            <constraint firstAttribute="centerX" secondItem="rf5-sE-Wta" secondAttribute="centerX" id="6ak-5i-4wQ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="rf5-sE-Wta" secondAttribute="bottom" constant="50" id="Erd-1v-mtO"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="rf5-sE-Wta" secondAttribute="bottom" constant="8" symbolic="YES" id="RFm-Np-d7P"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="JVA-Uc-ghb" secondAttribute="bottom" constant="250" id="TjD-cU-X3J"/>
-                            <constraint firstItem="rf5-sE-Wta" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="pHM-A0-j8R"/>
+                            <constraint firstItem="rf5-sE-Wta" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="hyR-Ob-yVy"/>
+                            <constraint firstItem="rf5-sE-Wta" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="oS8-aO-ah8"/>
+                            <constraint firstItem="rf5-sE-Wta" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="pHM-A0-j8R"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pHM-A0-j8R"/>
+                                <exclude reference="RFm-Np-d7P"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="RL0-gj-f7R"/>
                     <connections>

@@ -47,12 +47,43 @@ class FirstViewController: UIViewController {
         
     }
     
+    func loadData(){
+        
+        // Use optional binding to confirm the managedObjectContext
+        if let moc = self.managedObjectContext {
+            
+            // Create some dummy data to work with
+            var items = [
+                ("Broccoli is very high in Vitamin C, making 1 cup of chopped broccoli the Vitamin C equivalent of an orange."),
+                ("Broccoli is high in fiber. Not only in soluble fiber but insoluble as well."),
+                ("Broccoli contains the flavonoid kaempferol. Kaempferol is an anti-inflammatory, helps fight against cancer and heart disease."),
+                ("Broccoli is one of the very low calorie vegetables; provides just 34 calories per 100 g."),
+                ("It contains very good amounts of an anti-oxidant vitamin, vitamin-A, essential for healthy eye-sight."),
+                ("With an origin in Italy, broccoli was once known as Italian asparagus."),
+                ("The word Broccoli comes from the Italian word ‘brocco’ meaning arm or branch. "),
+                ("Broccoli promotes healthy bones."),
+                ("Broccoli boosts your immune system."),
+                ("Broccoli helps you feel full so you don't overeat.")
+                
+            ]
+            
+            // Loop through, creating items
+            for (itemText) in items {
+                // Create an individual item
+                SecondViewController.createInManagedObjectContext(moc, text: itemText)
+            }
+            
+        }
+
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         println("video controller loaded")
         
         //embed video and play
         intializeVideoPlayer()
+        loadData()
         
     }
     
@@ -69,10 +100,11 @@ class FirstViewController: UIViewController {
             var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
             var randomNumber = Int(unsignedRandomNumber)
 
+            //print(randomNumber)
             
             //Set the on screen text
-            //factStringText.text = fetchResults[randomNumber].factText
-            factStringText.text = "Brocolli is a health snack!"
+            factStringText.text = fetchResults[randomNumber].factText
+            //factStringText.text = "Broccoli is a health snack!"
             
         }
 
