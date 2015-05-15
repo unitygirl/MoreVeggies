@@ -7,12 +7,15 @@
 //
 
 import WatchKit
+import UIKit
 import Foundation
+import CoreData
 
 
 class InterfaceController: WKInterfaceController {
 
-    @IBOutlet weak var veggieFact: WKInterfaceLabel!
+   
+    @IBOutlet weak var factText: WKInterfaceLabel!
     
     @IBAction func moreFactsPressed() {
     }
@@ -23,7 +26,17 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        // Create a new fetch request using the LogItem entity
+        let fetchRequest = NSFetchRequest(entityName: "BrocolliFacts")
+        
+        
+            
+            //Set the on screen text
+            //factText. = "Some fact here"
+            
+        
         // Configure interface objects here.
+        
     }
 
     override func willActivate() {
