@@ -55,7 +55,7 @@ class VeggieCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! VeggieCollectionViewCell
 
-        cell.veggieImae.image = UIImage(named: "broccoli")
+        //cell.veggieImae.image = UIImage(named: "first")
         
         // Configure the cell
     
