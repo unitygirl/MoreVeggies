@@ -25,6 +25,8 @@
 		19CEB9641B0560D600FD2C7C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB9621B0560D600FD2C7C /* Interface.storyboard */; };
 		19CEB9661B0560D600FD2C7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB9651B0560D600FD2C7C /* Images.xcassets */; };
 		19CEB9691B0560D600FD2C7C /* MoreVeggiesApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19CEB94C1B0560D500FD2C7C /* MoreVeggiesApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E707908B1B057E8E00515376 /* VeggieCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707908A1B057E8E00515376 /* VeggieCollectionViewController.swift */; };
+		E707908D1B057FA300515376 /* VeggieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707908C1B057FA300515376 /* VeggieCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		19CEB9611B0560D600FD2C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CEB9631B0560D600FD2C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		19CEB9651B0560D600FD2C7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E707908A1B057E8E00515376 /* VeggieCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeggieCollectionViewController.swift; sourceTree = "<group>"; };
+		E707908C1B057FA300515376 /* VeggieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeggieCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,15 +147,12 @@
 		19CEB91D1B05156900FD2C7C /* MoreVeggiesApp */ = {
 			isa = PBXGroup;
 			children = (
-				19CEB9201B05156900FD2C7C /* AppDelegate.swift */,
-				19CEB9221B05156900FD2C7C /* FirstViewController.swift */,
-				19CEB9241B05156900FD2C7C /* SecondViewController.swift */,
-				19CEB9421B0546BC00FD2C7C /* BroccoliFactBook.swift */,
+				E70790881B057A3400515376 /* Controllers */,
+				E70790891B057A4A00515376 /* Model */,
 				19CEB9461B05531300FD2C7C /* ColorWheel.swift */,
-				19CEB9441B054AC400FD2C7C /* CarrotFactBook.swift */,
 				19CEB9261B05156900FD2C7C /* Main.storyboard */,
+				E707908C1B057FA300515376 /* VeggieCollectionViewCell.swift */,
 				19CEB9291B05156A00FD2C7C /* Images.xcassets */,
-				19CEB92B1B05156A00FD2C7C /* LaunchScreen.xib */,
 				19CEB91E1B05156900FD2C7C /* Supporting Files */,
 			);
 			path = MoreVeggiesApp;
@@ -160,6 +161,8 @@
 		19CEB91E1B05156900FD2C7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				19CEB92B1B05156A00FD2C7C /* LaunchScreen.xib */,
+				19CEB9201B05156900FD2C7C /* AppDelegate.swift */,
 				19CEB91F1B05156900FD2C7C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -219,6 +222,25 @@
 				19CEB9611B0560D600FD2C7C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E70790881B057A3400515376 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E707908A1B057E8E00515376 /* VeggieCollectionViewController.swift */,
+				19CEB9221B05156900FD2C7C /* FirstViewController.swift */,
+				19CEB9241B05156900FD2C7C /* SecondViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E70790891B057A4A00515376 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB9421B0546BC00FD2C7C /* BroccoliFactBook.swift */,
+				19CEB9441B054AC400FD2C7C /* CarrotFactBook.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,9 +407,11 @@
 				19CEB9251B05156900FD2C7C /* SecondViewController.swift in Sources */,
 				19CEB9451B054AC400FD2C7C /* CarrotFactBook.swift in Sources */,
 				19CEB9211B05156900FD2C7C /* AppDelegate.swift in Sources */,
+				E707908B1B057E8E00515376 /* VeggieCollectionViewController.swift in Sources */,
 				19CEB9431B0546BC00FD2C7C /* BroccoliFactBook.swift in Sources */,
 				19CEB9231B05156900FD2C7C /* FirstViewController.swift in Sources */,
 				19CEB9471B05531300FD2C7C /* ColorWheel.swift in Sources */,
+				E707908D1B057FA300515376 /* VeggieCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +691,7 @@
 				19CEB93E1B05156A00FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19CEB93F1B05156A00FD2C7C /* Build configuration list for PBXNativeTarget "MoreVeggiesAppTests" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +700,7 @@
 				19CEB9411B05156A00FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19CEB96A1B0560D600FD2C7C /* Build configuration list for PBXNativeTarget "MoreVeggiesApp WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +709,7 @@
 				19CEB96C1B0560D600FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19CEB96D1B0560D600FD2C7C /* Build configuration list for PBXNativeTarget "MoreVeggiesApp WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -691,6 +718,7 @@
 				19CEB96F1B0560D600FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
