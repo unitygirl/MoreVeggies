@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190D1C341B05973300B125B3 /* Facts.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 190D1C331B05973300B125B3 /* Facts.rtf */; };
 		19CEB9211B05156900FD2C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB9201B05156900FD2C7C /* AppDelegate.swift */; };
 		19CEB9231B05156900FD2C7C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB9221B05156900FD2C7C /* FirstViewController.swift */; };
 		19CEB9251B05156900FD2C7C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB9241B05156900FD2C7C /* SecondViewController.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		190D1C331B05973300B125B3 /* Facts.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Facts.rtf; sourceTree = "<group>"; };
 		19CEB91B1B05156900FD2C7C /* MoreVeggiesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreVeggiesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CEB91F1B05156900FD2C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CEB9201B05156900FD2C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				19CEB92B1B05156A00FD2C7C /* LaunchScreen.xib */,
 				19CEB9201B05156900FD2C7C /* AppDelegate.swift */,
 				19CEB91F1B05156900FD2C7C /* Info.plist */,
+				190D1C331B05973300B125B3 /* Facts.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190D1C341B05973300B125B3 /* Facts.rtf in Resources */,
 				19CEB9281B05156900FD2C7C /* Main.storyboard in Resources */,
 				19CEB92D1B05156A00FD2C7C /* LaunchScreen.xib in Resources */,
 				19CEB92A1B05156A00FD2C7C /* Images.xcassets in Resources */,
