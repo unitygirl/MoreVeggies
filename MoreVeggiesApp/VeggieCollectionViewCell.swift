@@ -10,5 +10,6 @@ import UIKit
 
 class VeggieCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var veggieImae: UIImageView!
+    @IBOutlet weak var veggieImage: UIImageView!
+    
 }
