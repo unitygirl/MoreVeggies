@@ -70,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		190D1C331B05973300B125B3 /* Facts.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Facts.rtf; sourceTree = "<group>"; };
+		190D1C351B059DC200B125B3 /* MoreVeggiesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MoreVeggiesApp.entitlements; sourceTree = "<group>"; };
 		19CEB91B1B05156900FD2C7C /* MoreVeggiesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreVeggiesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CEB91F1B05156900FD2C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CEB9201B05156900FD2C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		19CEB91D1B05156900FD2C7C /* MoreVeggiesApp */ = {
 			isa = PBXGroup;
 			children = (
+				190D1C351B059DC200B125B3 /* MoreVeggiesApp.entitlements */,
 				E70790881B057A3400515376 /* Controllers */,
 				E70790891B057A4A00515376 /* Model */,
 				19CEB9461B05531300FD2C7C /* ColorWheel.swift */,
@@ -330,6 +332,12 @@
 				TargetAttributes = {
 					19CEB91A1B05156900FD2C7C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9KMEAW6HM8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					19CEB9311B05156A00FD2C7C = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -570,9 +578,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoreVeggiesApp/MoreVeggiesApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MoreVeggiesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -580,9 +592,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoreVeggiesApp/MoreVeggiesApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MoreVeggiesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
