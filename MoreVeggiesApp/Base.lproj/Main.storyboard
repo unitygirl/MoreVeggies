@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NlM-xP-mGC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Broccoli-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="MoreVeggiesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,14 +38,14 @@
                             <constraint firstItem="rf5-sE-Wta" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="pHM-A0-j8R"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Broccoli" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="RL0-gj-f7R"/>
                     <connections>
                         <outlet property="factStringText" destination="rf5-sE-Wta" id="sx0-ex-Qff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-331"/>
+            <point key="canvasLocation" x="2396" y="-331"/>
         </scene>
         <!--Carrots-->
         <scene sceneID="wg7-f3-ORb">
@@ -108,7 +108,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nLP-jW-Aj0" customClass="VeggieCollectionViewCell" customModule="MoreVeggiesApp" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickerCell" id="nLP-jW-Aj0" customClass="VeggieCollectionViewCell" customModule="MoreVeggiesApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -123,6 +123,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="veggieImage" destination="orr-Ai-U73" id="uxH-kt-ENj"/>
+                                    <segue destination="Sdl-vH-ODx" kind="show" id="ByF-dr-CwK"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -131,10 +132,11 @@
                             <outlet property="delegate" destination="FiM-sZ-cbu" id="h3r-EQ-U6E"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="gef-IE-5aP"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unn-OW-ojo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="-667"/>
+            <point key="canvasLocation" x="1310" y="-499"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -148,12 +150,48 @@
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="0LD-dW-BzI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1PX-R3-JAh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NlM-xP-mGC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hkx-wf-Yy7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FiM-sZ-cbu" kind="relationship" relationship="rootViewController" id="8CM-F1-QVr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vp-TZ-gCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="-667"/>
+        </scene>
+        <!--Broccoli-->
+        <scene sceneID="gWw-Wc-Qoj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sdl-vH-ODx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Broccoli" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Waq-ba-yfl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Zbd-2F-Gpr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXS-fW-252" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="-163"/>
         </scene>
     </scenes>
     <resources>

@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
     
     var moviePlayer:MPMoviePlayerController!
     let baseURL = NSURL(string: "https://s3-us-west-2.amazonaws.com/goonberries/moreveggiesplz/")
-    var videoFile = "Tomatoes_V01.mp4"
+    var videoFile = "Broccoli_Final.mp4"
 
     //helper function for creating embedding a video file
     func intializeVideoPlayer() {
@@ -71,7 +71,8 @@ class FirstViewController: UIViewController {
 
             
             //Set the on screen text
-            factStringText.text = fetchResults[randomNumber].factText
+            //factStringText.text = fetchResults[randomNumber].factText
+            factStringText.text = "Brocolli is a health snack!"
             
         }
 
