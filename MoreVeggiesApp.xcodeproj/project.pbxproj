@@ -25,6 +25,9 @@
 		19CEB9641B0560D600FD2C7C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB9621B0560D600FD2C7C /* Interface.storyboard */; };
 		19CEB9661B0560D600FD2C7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB9651B0560D600FD2C7C /* Images.xcassets */; };
 		19CEB9691B0560D600FD2C7C /* MoreVeggiesApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19CEB94C1B0560D500FD2C7C /* MoreVeggiesApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6D6F328A1B0593E90000B647 /* FactModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F32881B0593E90000B647 /* FactModel.xcdatamodeld */; };
+		6D6F328C1B0596310000B647 /* LogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F328B1B0596310000B647 /* LogItem.swift */; };
+		6D6F328E1B0598510000B647 /* BrocolliFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F328D1B0598500000B647 /* BrocolliFacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		19CEB9611B0560D600FD2C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CEB9631B0560D600FD2C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		19CEB9651B0560D600FD2C7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6D6F32891B0593E90000B647 /* FactModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FactModel.xcdatamodel; sourceTree = "<group>"; };
+		6D6F328B1B0596310000B647 /* LogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItem.swift; sourceTree = "<group>"; };
+		6D6F328D1B0598500000B647 /* BrocolliFacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrocolliFacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 		19CEB9121B05156900FD2C7C = {
 			isa = PBXGroup;
 			children = (
+				6D6F328D1B0598500000B647 /* BrocolliFacts.swift */,
+				6D6F328B1B0596310000B647 /* LogItem.swift */,
 				19CEB91D1B05156900FD2C7C /* MoreVeggiesApp */,
 				19CEB9351B05156A00FD2C7C /* MoreVeggiesAppTests */,
 				19CEB94D1B0560D500FD2C7C /* MoreVeggiesApp WatchKit Extension */,
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				19CEB9201B05156900FD2C7C /* AppDelegate.swift */,
+				6D6F32881B0593E90000B647 /* FactModel.xcdatamodeld */,
 				19CEB9221B05156900FD2C7C /* FirstViewController.swift */,
 				19CEB9241B05156900FD2C7C /* SecondViewController.swift */,
 				19CEB9421B0546BC00FD2C7C /* BroccoliFactBook.swift */,
@@ -383,8 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CEB9251B05156900FD2C7C /* SecondViewController.swift in Sources */,
+				6D6F328C1B0596310000B647 /* LogItem.swift in Sources */,
 				19CEB9451B054AC400FD2C7C /* CarrotFactBook.swift in Sources */,
+				6D6F328A1B0593E90000B647 /* FactModel.xcdatamodeld in Sources */,
 				19CEB9211B05156900FD2C7C /* AppDelegate.swift in Sources */,
+				6D6F328E1B0598510000B647 /* BrocolliFacts.swift in Sources */,
 				19CEB9431B0546BC00FD2C7C /* BroccoliFactBook.swift in Sources */,
 				19CEB9231B05156900FD2C7C /* FirstViewController.swift in Sources */,
 				19CEB9471B05531300FD2C7C /* ColorWheel.swift in Sources */,
@@ -667,6 +679,7 @@
 				19CEB93E1B05156A00FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19CEB93F1B05156A00FD2C7C /* Build configuration list for PBXNativeTarget "MoreVeggiesAppTests" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +688,7 @@
 				19CEB9411B05156A00FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19CEB96A1B0560D600FD2C7C /* Build configuration list for PBXNativeTarget "MoreVeggiesApp WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +697,7 @@
 				19CEB96C1B0560D600FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19CEB96D1B0560D600FD2C7C /* Build configuration list for PBXNativeTarget "MoreVeggiesApp WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -691,8 +706,22 @@
 				19CEB96F1B0560D600FD2C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D6F32881B0593E90000B647 /* FactModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D6F32891B0593E90000B647 /* FactModel.xcdatamodel */,
+			);
+			currentVersion = 6D6F32891B0593E90000B647 /* FactModel.xcdatamodel */;
+			path = FactModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 19CEB9131B05156900FD2C7C /* Project object */;
 }

@@ -7,34 +7,88 @@
 //
 
 import UIKit
+import MediaPlayer
+import CoreData
 
 class FirstViewController: UIViewController {
 
-    @IBAction func veggieFactButton(sender: AnyObject) {
-        showFunFact()
-    }
-    @IBOutlet weak var veggieFactButton: UIButton!
-    @IBOutlet weak var veggieFactLabel: UILabel!
+    @IBOutlet weak var factStringText: UILabel!
     
-    let factBook = BroccoliFactBook()
-    let colorWheel = ColorWheel()
+    // Retreive the managedObjectContext from AppDelegate
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+ 
+    
+    var moviePlayer:MPMoviePlayerController!
+    let baseURL = NSURL(string: "https://s3-us-west-2.amazonaws.com/goonberries/moreveggiesplz/")
+    var videoFile = "Tomatoes_V01.mp4"
 
+    //helper function for creating embedding a video file
+    func intializeVideoPlayer() {
+        
+        //Construct URL based on arguments
+        var absURL = NSURL(string: videoFile, relativeToURL: baseURL)
+        
+        //Build screen size
+        var screenRect = UIScreen.mainScreen().bounds
+        var videoWidth  : Double = Double(screenRect.size.width)
+        var videoHeight : Double = round(videoWidth*0.5625)
+        var videoTopPadding = 100.0
+        
+        
+        //Create Media player with remote file
+        moviePlayer = MPMoviePlayerController(contentURL: absURL)
+        moviePlayer.view.frame = CGRect(x: 0.0, y: videoTopPadding, width: videoWidth, height: videoHeight)
+        
+        self.view.addSubview(moviePlayer.view)
+        
+        //Start playing video and hide screen controls
+        moviePlayer.fullscreen = true
+        moviePlayer.controlStyle = MPMovieControlStyle.None
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        veggieFactLabel.text = factBook.randomFact()
+        println("video controller loaded")
+        
+        //embed video and play
+        intializeVideoPlayer()
+        
     }
+    
+    //Helper Function for changing fact text on screen
+    func setFactText() {
+        
+        // Create a new fetch request using the LogItem entity
+        let fetchRequest = NSFetchRequest(entityName: "BrocolliFacts")
+        
+        // Execute the fetch request, and cast the results to an array of LogItem objects
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [BrocolliFacts] {
+            
+            var unsignedArrayCount = UInt32(fetchResults.count)
+            var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+            var randomNumber = Int(unsignedRandomNumber)
 
+            
+            //Set the on screen text
+            factStringText.text = fetchResults[randomNumber].factText
+            
+        }
+
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+            setFactText()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func showFunFact() {
-        var randomColor = colorWheel.randomColor()
-        view.backgroundColor = randomColor
-       veggieFactButton.tintColor = randomColor
-        veggieFactLabel.text = factBook.randomFact()
-    }
-
+    
+    
 }
 

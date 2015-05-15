@@ -7,18 +7,53 @@
 //
 
 import UIKit
+import CoreData
 
 class SecondViewController: UIViewController {
+    
+    // Retreive the managedObjectContext from AppDelegate
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+ 
+    
     @IBOutlet weak var funFactLabel: UILabel!
     
     @IBOutlet weak var funFactButton: UIButton!
     let factBook = CarrotFactBook()
     let colorWheel = ColorWheel()
     
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, text: String) -> BrocolliFacts {
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("BrocolliFacts", inManagedObjectContext: moc) as! BrocolliFacts
+        newItem.factText = text
+        
+        return newItem
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("BrocolliFacts", inManagedObjectContext: self.managedObjectContext!) as! BrocolliFacts
+        
+        newItem.factText = "Fact about Broccoli #1"
+        
+        // Use optional binding to confirm the managedObjectContext
+        if let moc = self.managedObjectContext {
+
+        // Create some dummy data to work with
+        var items = [
+            ("Fact #1"),
+            ("Fact #2"),
+        ]
+        
+        // Loop through, creating items
+        for (itemText) in items {
+            // Create an individual item
+            SecondViewController.createInManagedObjectContext(moc, text: itemText)
+        }
+
+        }
     }
     
     override func didReceiveMemoryWarning() {
