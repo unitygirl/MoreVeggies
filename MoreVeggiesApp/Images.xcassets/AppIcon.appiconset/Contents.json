@@ -1,21 +1,18 @@
 {
   "images" : [
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "asparugus.png",
+      "size" : "29x29",
       "scale" : "1x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "asparugus-1.png",
+      "size" : "29x29",
       "scale" : "2x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "asparugus-2.png",
+      "size" : "29x29",
       "scale" : "3x"
     },
     {
@@ -49,15 +46,13 @@
       "scale" : "3x"
     },
     {
-      "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "asparugus-3.png",
+      "size" : "29x29",
       "scale" : "1x"
     },
     {
-      "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "asparugus-4.png",
+      "size" : "29x29",
       "scale" : "2x"
     },
     {
@@ -109,7 +104,6 @@
       "size" : "24x24",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "asparugus-5.png",
       "role" : "notificationCenter",
       "subtype" : "38mm"
     },
@@ -117,7 +111,6 @@
       "size" : "27.5x27.5",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "asparugus-6.png",
       "role" : "notificationCenter",
       "subtype" : "42mm"
     },
